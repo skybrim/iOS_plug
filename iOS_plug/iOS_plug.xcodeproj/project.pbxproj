@@ -16,6 +16,7 @@
 		B8256757247CF426001CF222 /* ClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8256754247CF425001CF222 /* ClientProtocol.swift */; };
 		B8256758247CF426001CF222 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8256755247CF426001CF222 /* RequestProtocol.swift */; };
 		B8256759247CF426001CF222 /* Parsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8256756247CF426001CF222 /* Parsable.swift */; };
+		B825675B247D0BA6001CF222 /* ExampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B825675A247D0BA6001CF222 /* ExampleModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		B8256754247CF425001CF222 /* ClientProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientProtocol.swift; sourceTree = "<group>"; };
 		B8256755247CF426001CF222 /* RequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
 		B8256756247CF426001CF222 /* Parsable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parsable.swift; sourceTree = "<group>"; };
+		B825675A247D0BA6001CF222 /* ExampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				B8256754247CF425001CF222 /* ClientProtocol.swift */,
 				B8256756247CF426001CF222 /* Parsable.swift */,
 				B8256755247CF426001CF222 /* RequestProtocol.swift */,
+				B825675A247D0BA6001CF222 /* ExampleModel.swift */,
 			);
 			path = Net;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 				B8256744247CF29A001CF222 /* ViewController.swift in Sources */,
 				B8256740247CF29A001CF222 /* AppDelegate.swift in Sources */,
 				B8256742247CF29A001CF222 /* SceneDelegate.swift in Sources */,
+				B825675B247D0BA6001CF222 /* ExampleModel.swift in Sources */,
 				B8256758247CF426001CF222 /* RequestProtocol.swift in Sources */,
 				B8256759247CF426001CF222 /* Parsable.swift in Sources */,
 			);
