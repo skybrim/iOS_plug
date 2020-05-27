@@ -16,7 +16,7 @@
 		B8256757247CF426001CF222 /* ClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8256754247CF425001CF222 /* ClientProtocol.swift */; };
 		B8256758247CF426001CF222 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8256755247CF426001CF222 /* RequestProtocol.swift */; };
 		B8256759247CF426001CF222 /* Parsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8256756247CF426001CF222 /* Parsable.swift */; };
-		B825675B247D0BA6001CF222 /* ExampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B825675A247D0BA6001CF222 /* ExampleModel.swift */; };
+		B8886808247E35F0004B6C7F /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8886807247E35F0004B6C7F /* Example.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,7 @@
 		B8256754247CF425001CF222 /* ClientProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientProtocol.swift; sourceTree = "<group>"; };
 		B8256755247CF426001CF222 /* RequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
 		B8256756247CF426001CF222 /* Parsable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parsable.swift; sourceTree = "<group>"; };
-		B825675A247D0BA6001CF222 /* ExampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleModel.swift; sourceTree = "<group>"; };
+		B8886807247E35F0004B6C7F /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +64,7 @@
 		B825673E247CF29A001CF222 /* iOS_plug */ = {
 			isa = PBXGroup;
 			children = (
-				B8256753247CF3F8001CF222 /* Net */,
+				B8256753247CF3F8001CF222 /* 网络封装 */,
 				B825673F247CF29A001CF222 /* AppDelegate.swift */,
 				B8256741247CF29A001CF222 /* SceneDelegate.swift */,
 				B8256743247CF29A001CF222 /* ViewController.swift */,
@@ -76,15 +76,15 @@
 			path = iOS_plug;
 			sourceTree = "<group>";
 		};
-		B8256753247CF3F8001CF222 /* Net */ = {
+		B8256753247CF3F8001CF222 /* 网络封装 */ = {
 			isa = PBXGroup;
 			children = (
 				B8256754247CF425001CF222 /* ClientProtocol.swift */,
 				B8256756247CF426001CF222 /* Parsable.swift */,
 				B8256755247CF426001CF222 /* RequestProtocol.swift */,
-				B825675A247D0BA6001CF222 /* ExampleModel.swift */,
+				B8886807247E35F0004B6C7F /* Example.swift */,
 			);
-			path = Net;
+			path = "网络封装";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,7 +162,7 @@
 				B8256744247CF29A001CF222 /* ViewController.swift in Sources */,
 				B8256740247CF29A001CF222 /* AppDelegate.swift in Sources */,
 				B8256742247CF29A001CF222 /* SceneDelegate.swift in Sources */,
-				B825675B247D0BA6001CF222 /* ExampleModel.swift in Sources */,
+				B8886808247E35F0004B6C7F /* Example.swift in Sources */,
 				B8256758247CF426001CF222 /* RequestProtocol.swift in Sources */,
 				B8256759247CF426001CF222 /* Parsable.swift in Sources */,
 			);
