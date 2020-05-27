@@ -17,6 +17,9 @@
 		B8256758247CF426001CF222 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8256755247CF426001CF222 /* RequestProtocol.swift */; };
 		B8256759247CF426001CF222 /* Parsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8256756247CF426001CF222 /* Parsable.swift */; };
 		B8886808247E35F0004B6C7F /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8886807247E35F0004B6C7F /* Example.swift */; };
+		B888680B247E4760004B6C7F /* UICollectionViewFallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888680A247E4760004B6C7F /* UICollectionViewFallLayout.swift */; };
+		B888680E247E5A80004B6C7F /* WeakProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888680D247E5A80004B6C7F /* WeakProxy.swift */; };
+		B8886810247E5C0D004B6C7F /* ExampleFallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888680F247E5C0D004B6C7F /* ExampleFallViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		B8256755247CF426001CF222 /* RequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
 		B8256756247CF426001CF222 /* Parsable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parsable.swift; sourceTree = "<group>"; };
 		B8886807247E35F0004B6C7F /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
+		B888680A247E4760004B6C7F /* UICollectionViewFallLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewFallLayout.swift; sourceTree = "<group>"; };
+		B888680D247E5A80004B6C7F /* WeakProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakProxy.swift; sourceTree = "<group>"; };
+		B888680F247E5C0D004B6C7F /* ExampleFallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleFallViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,8 @@
 		B825673E247CF29A001CF222 /* iOS_plug */ = {
 			isa = PBXGroup;
 			children = (
+				B888680C247E4A39004B6C7F /* WeakProxy弱代理 */,
+				B8886809247E46E3004B6C7F /* 瀑布流 */,
 				B8256753247CF3F8001CF222 /* 网络封装 */,
 				B825673F247CF29A001CF222 /* AppDelegate.swift */,
 				B8256741247CF29A001CF222 /* SceneDelegate.swift */,
@@ -85,6 +93,23 @@
 				B8886807247E35F0004B6C7F /* Example.swift */,
 			);
 			path = "网络封装";
+			sourceTree = "<group>";
+		};
+		B8886809247E46E3004B6C7F /* 瀑布流 */ = {
+			isa = PBXGroup;
+			children = (
+				B888680A247E4760004B6C7F /* UICollectionViewFallLayout.swift */,
+				B888680F247E5C0D004B6C7F /* ExampleFallViewController.swift */,
+			);
+			path = "瀑布流";
+			sourceTree = "<group>";
+		};
+		B888680C247E4A39004B6C7F /* WeakProxy弱代理 */ = {
+			isa = PBXGroup;
+			children = (
+				B888680D247E5A80004B6C7F /* WeakProxy.swift */,
+			);
+			path = "WeakProxy弱代理";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,8 +183,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B888680E247E5A80004B6C7F /* WeakProxy.swift in Sources */,
+				B8886810247E5C0D004B6C7F /* ExampleFallViewController.swift in Sources */,
 				B8256757247CF426001CF222 /* ClientProtocol.swift in Sources */,
 				B8256744247CF29A001CF222 /* ViewController.swift in Sources */,
+				B888680B247E4760004B6C7F /* UICollectionViewFallLayout.swift in Sources */,
 				B8256740247CF29A001CF222 /* AppDelegate.swift in Sources */,
 				B8256742247CF29A001CF222 /* SceneDelegate.swift in Sources */,
 				B8886808247E35F0004B6C7F /* Example.swift in Sources */,
