@@ -8,22 +8,58 @@
 
 import UIKit
 
-class ViewController: UIViewController {
 
+
+class ViewController: UIViewController {
+    
+    fileprivate let ShowFuncCell = "ShowFuncCell"
+
+    lazy var show: UITableView = {
+        let tv = UITableView(frame: self.view.frame, style: .plain)
+        tv.delegate = self
+        tv.dataSource = self
+        tv.register(UITableViewCell.self, forCellReuseIdentifier: ShowFuncCell)
+        return tv
+    }()
+    
+    var funcArray: [String]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        for _ in 0 ..< 10 {
-            URLSessionClient().send(ExampleRequest(path: "json1")) { (result) in
-                switch result {
-                    case .success(let model):
-                        print(model.message)
-                    case .failure(let error):
-                        print(error)
-                }
-            }
+        funcArray = ["网络封装", "瀑布流", "弱代理"]
+        
+        addSubviews()
+    }
+    
+    func addSubviews() {
+        view.addSubview(show)
+    }
+}
+
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            self.navigationController?.pushViewController(ExampleNetViewController(), animated: true)
+        case 1:
+            self.navigationController?.pushViewController(ExampleFallViewController(), animated: true)
+        default:
+            tableView.deselectRow(at: indexPath, animated: true)
         }
+    }
+}
+
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return funcArray?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: ShowFuncCell, for: indexPath)
+        cell.textLabel?.text = funcArray?[indexPath.row] ?? "None"
+        return cell
     }
 }
 

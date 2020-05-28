@@ -8,45 +8,128 @@
 
 import UIKit
 
-protocol UICollectionViewFallLayoutProtocol {
+fileprivate let defaultColumnCount: Int = 3
+fileprivate let defaultColumnMargin: CGFloat = 10
+fileprivate let defaultRowMargin: CGFloat = 10
+fileprivate let defaultEdgeInsets: UIEdgeInsets = UIEdgeInsets(top: 10,
+                                                               left: 10,
+                                                               bottom: 10,
+                                                               right: 10)
+
+protocol UICollectionViewFallLayoutDelegate: class {
+    var fallColumnCount: Int { get }
+    var fallColumnMargin: CGFloat { get }
+    var fallRowMargin: CGFloat { get }
+    var fallEdgeInsets: UIEdgeInsets { get }
     
+    func fallLayout(_ fallLayout: UICollectionViewFallLayout, width: CGFloat, heightForIndexPath: IndexPath) -> CGFloat
+}
+
+extension UICollectionViewFallLayoutDelegate {
+    var fallColumnCount: Int {
+        return defaultColumnCount
+    }
+    var fallColumnMargin: CGFloat {
+        return defaultColumnMargin
+    }
+    var fallRowMargin: CGFloat {
+        return defaultRowMargin
+    }
+    var fallEdgeInsets: UIEdgeInsets {
+        return defaultEdgeInsets
+    }
 }
 
 class UICollectionViewFallLayout: UICollectionViewLayout {
     
-    var attributesArray: [UICollectionViewLayoutAttributes]?
+    // MARK: Class Variable Definitions
     
-    // 由于瀑布流导致的尺寸变化我们重写 contentSize。
-    // 其中宽度一般情况我们是可以确定的，它取决于每个item的宽度，一行几个 item，以及 contentInset 值。
-    // 高度我们可以先设定为 0，之后在 prepare() 里进行更新。
-    override var collectionViewContentSize: CGSize {
-        get {
-            return CGSize(width: 0, height: 100)
-        }
+    // UICollectionViewFallLayoutDelegate
+    weak var delegate: UICollectionViewFallLayoutDelegate?
+    fileprivate var columnCount: Int {
+        return self.delegate?.fallColumnCount ?? defaultColumnCount
+    }
+    fileprivate var columnMargin: CGFloat {
+        return self.delegate?.fallRowMargin ?? defaultColumnMargin
+    }
+    fileprivate var rowMargin: CGFloat {
+        return self.delegate?.fallRowMargin ?? defaultRowMargin
+    }
+    fileprivate var edgeInsets: UIEdgeInsets {
+        return self.delegate?.fallEdgeInsets ?? defaultEdgeInsets
     }
     
-    // 该方法发生在 UICollectionView 数据准备好，但界面还未布局之时。
-    // 它用于计算各种布局信息，并设定每个 item 的相关属性。
-    // 这里我们用横纵坐标轴分别进行计算每个 cell 的 xOffset 和 yOffset，然后将其转化为相应的 frame 并缓存起来。
+    // 存放所有列的当前高度
+    fileprivate var columnHeights: [CGFloat] = []
+    // 存放 item 的 attributes 的数组
+    fileprivate var attributesArray: [UICollectionViewLayoutAttributes] = []
+    
+    fileprivate var contentHeight: CGFloat = 0
+    override var collectionViewContentSize: CGSize {
+        CGSize(width: self.collectionView?.frame.width ?? 0, height: contentHeight)
+    }
+    
+    // MARK: Class func
+
     override func prepare() {
         super.prepare()
         
-        if let itemCount = collectionView?.numberOfItems(inSection: 0)
-        for item in itemCount {
-            
+        self.attributesArray.removeAll()
+        
+        if let itemCount = collectionView?.numberOfItems(inSection: 0) {
+            for item in 0..<itemCount {
+                let indexPath = IndexPath(item: item, section: 0)
+                let attrs = UICollectionViewLayoutAttributes(forCellWith: indexPath)
+                self.attributesArray.append(attrs)
+            }
         }
     }
     
-    // prepare() 完成布局之后该方法被调用，它决定了哪些 item 在 CollectionView 给定的区域内可见。
-    // 我们只要取交集（intersect）即可。
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         return attributesArray
     }
     
-    // 该方法需要我们针对每一个 item 设定 layoutAttribute。
-    // 由于我们在 prepare() 中已经完成相应计算，此时只需返回对应 indexPath 的特定属性即可。
     override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
-        return nil
+        let attrs = UICollectionViewLayoutAttributes(forCellWith: indexPath)
+        
+        // 确定宽和高
+        let width = calculateCellWidth()
+        let height = self.delegate?.fallLayout(self, width: width, heightForIndexPath: indexPath) ?? 0
+        var x: CGFloat = 0.0
+        var y: CGFloat = 0.0
+        // 找到最短的一列
+        var indexOfMinHeight: Int = 0
+        var minHeight: CGFloat = 0.0
+        if let min = columnHeights.min(),
+            let index = columnHeights.firstIndex(of: min) {
+            indexOfMinHeight = Int(index)
+            minHeight = min
+        }
+        x = edgeInsets.left + (width + columnMargin) * CGFloat(indexOfMinHeight)
+        y = minHeight
+        if y != edgeInsets.top { y += rowMargin }
+        
+        // 赋值
+        attrs.frame = CGRect(x: x, y: y, width: width, height: height)
+        
+        // 更新高度数组
+        let newHeight = attrs.frame.maxY
+        self.columnHeights[indexOfMinHeight] = newHeight
+        
+        // 更新 contentSize 高度
+        if contentHeight < newHeight {
+            contentHeight = newHeight
+        }
+
+        return attrs
+    }
+    
+    func calculateCellWidth() -> CGFloat {
+        let collectionViewWidth = self.collectionView?.frame.width ?? 0
+        let edgeWidth = edgeInsets.left + edgeInsets.right
+        let marginWidth = columnMargin * CGFloat(columnCount - 1)
+            
+        return (collectionViewWidth - edgeWidth - marginWidth) / CGFloat(columnCount)
     }
     
 }

@@ -16,7 +16,8 @@
 		B8256757247CF426001CF222 /* ClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8256754247CF425001CF222 /* ClientProtocol.swift */; };
 		B8256758247CF426001CF222 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8256755247CF426001CF222 /* RequestProtocol.swift */; };
 		B8256759247CF426001CF222 /* Parsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8256756247CF426001CF222 /* Parsable.swift */; };
-		B8886808247E35F0004B6C7F /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8886807247E35F0004B6C7F /* Example.swift */; };
+		B83B61C8247F8B8A003A9200 /* ExampleNetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83B61C7247F8B8A003A9200 /* ExampleNetViewController.swift */; };
+		B83B61CB247FB843003A9200 /* Kit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83B61CA247FB843003A9200 /* Kit.swift */; };
 		B888680B247E4760004B6C7F /* UICollectionViewFallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888680A247E4760004B6C7F /* UICollectionViewFallLayout.swift */; };
 		B888680E247E5A80004B6C7F /* WeakProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888680D247E5A80004B6C7F /* WeakProxy.swift */; };
 		B8886810247E5C0D004B6C7F /* ExampleFallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888680F247E5C0D004B6C7F /* ExampleFallViewController.swift */; };
@@ -34,7 +35,8 @@
 		B8256754247CF425001CF222 /* ClientProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientProtocol.swift; sourceTree = "<group>"; };
 		B8256755247CF426001CF222 /* RequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
 		B8256756247CF426001CF222 /* Parsable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parsable.swift; sourceTree = "<group>"; };
-		B8886807247E35F0004B6C7F /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
+		B83B61C7247F8B8A003A9200 /* ExampleNetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleNetViewController.swift; sourceTree = "<group>"; };
+		B83B61CA247FB843003A9200 /* Kit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kit.swift; sourceTree = "<group>"; };
 		B888680A247E4760004B6C7F /* UICollectionViewFallLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewFallLayout.swift; sourceTree = "<group>"; };
 		B888680D247E5A80004B6C7F /* WeakProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakProxy.swift; sourceTree = "<group>"; };
 		B888680F247E5C0D004B6C7F /* ExampleFallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleFallViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 		B825673E247CF29A001CF222 /* iOS_plug */ = {
 			isa = PBXGroup;
 			children = (
+				B83B61C9247FB82C003A9200 /* other */,
 				B888680C247E4A39004B6C7F /* WeakProxy弱代理 */,
 				B8886809247E46E3004B6C7F /* 瀑布流 */,
 				B8256753247CF3F8001CF222 /* 网络封装 */,
@@ -90,9 +93,17 @@
 				B8256754247CF425001CF222 /* ClientProtocol.swift */,
 				B8256756247CF426001CF222 /* Parsable.swift */,
 				B8256755247CF426001CF222 /* RequestProtocol.swift */,
-				B8886807247E35F0004B6C7F /* Example.swift */,
+				B83B61C7247F8B8A003A9200 /* ExampleNetViewController.swift */,
 			);
 			path = "网络封装";
+			sourceTree = "<group>";
+		};
+		B83B61C9247FB82C003A9200 /* other */ = {
+			isa = PBXGroup;
+			children = (
+				B83B61CA247FB843003A9200 /* Kit.swift */,
+			);
+			path = other;
 			sourceTree = "<group>";
 		};
 		B8886809247E46E3004B6C7F /* 瀑布流 */ = {
@@ -185,13 +196,14 @@
 			files = (
 				B888680E247E5A80004B6C7F /* WeakProxy.swift in Sources */,
 				B8886810247E5C0D004B6C7F /* ExampleFallViewController.swift in Sources */,
+				B83B61CB247FB843003A9200 /* Kit.swift in Sources */,
 				B8256757247CF426001CF222 /* ClientProtocol.swift in Sources */,
 				B8256744247CF29A001CF222 /* ViewController.swift in Sources */,
 				B888680B247E4760004B6C7F /* UICollectionViewFallLayout.swift in Sources */,
 				B8256740247CF29A001CF222 /* AppDelegate.swift in Sources */,
 				B8256742247CF29A001CF222 /* SceneDelegate.swift in Sources */,
-				B8886808247E35F0004B6C7F /* Example.swift in Sources */,
 				B8256758247CF426001CF222 /* RequestProtocol.swift in Sources */,
+				B83B61C8247F8B8A003A9200 /* ExampleNetViewController.swift in Sources */,
 				B8256759247CF426001CF222 /* Parsable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
