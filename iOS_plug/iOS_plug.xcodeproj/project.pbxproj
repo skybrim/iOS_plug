@@ -17,7 +17,7 @@
 		B8256758247CF426001CF222 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8256755247CF426001CF222 /* RequestProtocol.swift */; };
 		B8256759247CF426001CF222 /* Parsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8256756247CF426001CF222 /* Parsable.swift */; };
 		B83B61C8247F8B8A003A9200 /* ExampleNetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83B61C7247F8B8A003A9200 /* ExampleNetViewController.swift */; };
-		B83B61CB247FB843003A9200 /* Kit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83B61CA247FB843003A9200 /* Kit.swift */; };
+		B83B61CB247FB843003A9200 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83B61CA247FB843003A9200 /* UIColorExtension.swift */; };
 		B888680B247E4760004B6C7F /* UICollectionViewFallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888680A247E4760004B6C7F /* UICollectionViewFallLayout.swift */; };
 		B888680E247E5A80004B6C7F /* WeakProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888680D247E5A80004B6C7F /* WeakProxy.swift */; };
 		B8886810247E5C0D004B6C7F /* ExampleFallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888680F247E5C0D004B6C7F /* ExampleFallViewController.swift */; };
@@ -36,7 +36,7 @@
 		B8256755247CF426001CF222 /* RequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
 		B8256756247CF426001CF222 /* Parsable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parsable.swift; sourceTree = "<group>"; };
 		B83B61C7247F8B8A003A9200 /* ExampleNetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleNetViewController.swift; sourceTree = "<group>"; };
-		B83B61CA247FB843003A9200 /* Kit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kit.swift; sourceTree = "<group>"; };
+		B83B61CA247FB843003A9200 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		B888680A247E4760004B6C7F /* UICollectionViewFallLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewFallLayout.swift; sourceTree = "<group>"; };
 		B888680D247E5A80004B6C7F /* WeakProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakProxy.swift; sourceTree = "<group>"; };
 		B888680F247E5C0D004B6C7F /* ExampleFallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleFallViewController.swift; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 		B83B61C9247FB82C003A9200 /* other */ = {
 			isa = PBXGroup;
 			children = (
-				B83B61CA247FB843003A9200 /* Kit.swift */,
+				B83B61CA247FB843003A9200 /* UIColorExtension.swift */,
 			);
 			path = other;
 			sourceTree = "<group>";
@@ -196,7 +196,7 @@
 			files = (
 				B888680E247E5A80004B6C7F /* WeakProxy.swift in Sources */,
 				B8886810247E5C0D004B6C7F /* ExampleFallViewController.swift in Sources */,
-				B83B61CB247FB843003A9200 /* Kit.swift in Sources */,
+				B83B61CB247FB843003A9200 /* UIColorExtension.swift in Sources */,
 				B8256757247CF426001CF222 /* ClientProtocol.swift in Sources */,
 				B8256744247CF29A001CF222 /* ViewController.swift in Sources */,
 				B888680B247E4760004B6C7F /* UICollectionViewFallLayout.swift in Sources */,
