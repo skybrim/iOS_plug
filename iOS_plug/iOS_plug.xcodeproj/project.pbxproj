@@ -18,8 +18,8 @@
 		B8256759247CF426001CF222 /* Parsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8256756247CF426001CF222 /* Parsable.swift */; };
 		B83B61C8247F8B8A003A9200 /* ExampleNetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83B61C7247F8B8A003A9200 /* ExampleNetViewController.swift */; };
 		B83B61CB247FB843003A9200 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83B61CA247FB843003A9200 /* UIColorExtension.swift */; };
+		B8513C542480F693008833B7 /* WeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = B8513C532480F693008833B7 /* WeakProxy.m */; };
 		B888680B247E4760004B6C7F /* UICollectionViewFallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888680A247E4760004B6C7F /* UICollectionViewFallLayout.swift */; };
-		B888680E247E5A80004B6C7F /* WeakProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888680D247E5A80004B6C7F /* WeakProxy.swift */; };
 		B8886810247E5C0D004B6C7F /* ExampleFallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888680F247E5C0D004B6C7F /* ExampleFallViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,8 +37,10 @@
 		B8256756247CF426001CF222 /* Parsable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parsable.swift; sourceTree = "<group>"; };
 		B83B61C7247F8B8A003A9200 /* ExampleNetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleNetViewController.swift; sourceTree = "<group>"; };
 		B83B61CA247FB843003A9200 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		B8513C512480F692008833B7 /* iOS_plug-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS_plug-Bridging-Header.h"; sourceTree = "<group>"; };
+		B8513C522480F693008833B7 /* WeakProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeakProxy.h; sourceTree = "<group>"; };
+		B8513C532480F693008833B7 /* WeakProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeakProxy.m; sourceTree = "<group>"; };
 		B888680A247E4760004B6C7F /* UICollectionViewFallLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewFallLayout.swift; sourceTree = "<group>"; };
-		B888680D247E5A80004B6C7F /* WeakProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakProxy.swift; sourceTree = "<group>"; };
 		B888680F247E5C0D004B6C7F /* ExampleFallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleFallViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,7 +120,9 @@
 		B888680C247E4A39004B6C7F /* WeakProxy弱代理 */ = {
 			isa = PBXGroup;
 			children = (
-				B888680D247E5A80004B6C7F /* WeakProxy.swift */,
+				B8513C512480F692008833B7 /* iOS_plug-Bridging-Header.h */,
+				B8513C522480F693008833B7 /* WeakProxy.h */,
+				B8513C532480F693008833B7 /* WeakProxy.m */,
 			);
 			path = "WeakProxy弱代理";
 			sourceTree = "<group>";
@@ -155,6 +159,7 @@
 				TargetAttributes = {
 					B825673B247CF29A001CF222 = {
 						CreatedOnToolsVersion = 11.4.1;
+						LastSwiftMigration = 1140;
 					};
 				};
 			};
@@ -194,13 +199,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B888680E247E5A80004B6C7F /* WeakProxy.swift in Sources */,
 				B8886810247E5C0D004B6C7F /* ExampleFallViewController.swift in Sources */,
 				B83B61CB247FB843003A9200 /* UIColorExtension.swift in Sources */,
 				B8256757247CF426001CF222 /* ClientProtocol.swift in Sources */,
 				B8256744247CF29A001CF222 /* ViewController.swift in Sources */,
 				B888680B247E4760004B6C7F /* UICollectionViewFallLayout.swift in Sources */,
 				B8256740247CF29A001CF222 /* AppDelegate.swift in Sources */,
+				B8513C542480F693008833B7 /* WeakProxy.m in Sources */,
 				B8256742247CF29A001CF222 /* SceneDelegate.swift in Sources */,
 				B8256758247CF426001CF222 /* RequestProtocol.swift in Sources */,
 				B83B61C8247F8B8A003A9200 /* ExampleNetViewController.swift in Sources */,
@@ -348,6 +353,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MUXR6G7733;
 				INFOPLIST_FILE = iOS_plug/Info.plist;
@@ -357,6 +363,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.skybrim.iOS-plug";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOS_plug/WeakProxy弱代理/iOS_plug-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -366,6 +374,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MUXR6G7733;
 				INFOPLIST_FILE = iOS_plug/Info.plist;
@@ -375,6 +384,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.skybrim.iOS-plug";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOS_plug/WeakProxy弱代理/iOS_plug-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
