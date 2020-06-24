@@ -18,6 +18,7 @@
 		B8256759247CF426001CF222 /* Parsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8256756247CF426001CF222 /* Parsable.swift */; };
 		B83B61C8247F8B8A003A9200 /* ExampleNetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83B61C7247F8B8A003A9200 /* ExampleNetViewController.swift */; };
 		B83B61CB247FB843003A9200 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83B61CA247FB843003A9200 /* UIColorExtension.swift */; };
+		B842950A24A2E25100142B68 /* PermanentThread.m in Sources */ = {isa = PBXBuildFile; fileRef = B842950924A2E25100142B68 /* PermanentThread.m */; };
 		B8513C542480F693008833B7 /* WeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = B8513C532480F693008833B7 /* WeakProxy.m */; };
 		B888680B247E4760004B6C7F /* UICollectionViewFallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888680A247E4760004B6C7F /* UICollectionViewFallLayout.swift */; };
 		B8886810247E5C0D004B6C7F /* ExampleFallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888680F247E5C0D004B6C7F /* ExampleFallViewController.swift */; };
@@ -37,6 +38,8 @@
 		B8256756247CF426001CF222 /* Parsable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parsable.swift; sourceTree = "<group>"; };
 		B83B61C7247F8B8A003A9200 /* ExampleNetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleNetViewController.swift; sourceTree = "<group>"; };
 		B83B61CA247FB843003A9200 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		B842950824A2E25100142B68 /* PermanentThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PermanentThread.h; sourceTree = "<group>"; };
+		B842950924A2E25100142B68 /* PermanentThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PermanentThread.m; sourceTree = "<group>"; };
 		B8513C512480F692008833B7 /* iOS_plug-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS_plug-Bridging-Header.h"; sourceTree = "<group>"; };
 		B8513C522480F693008833B7 /* WeakProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeakProxy.h; sourceTree = "<group>"; };
 		B8513C532480F693008833B7 /* WeakProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeakProxy.m; sourceTree = "<group>"; };
@@ -74,13 +77,15 @@
 		B825673E247CF29A001CF222 /* iOS_plug */ = {
 			isa = PBXGroup;
 			children = (
-				B83B61C9247FB82C003A9200 /* other */,
+				B842950524A2DF7000142B68 /* 常驻线程 */,
+				B83B61C9247FB82C003A9200 /* Color */,
 				B888680C247E4A39004B6C7F /* WeakProxy弱代理 */,
 				B8886809247E46E3004B6C7F /* 瀑布流 */,
-				B8256753247CF3F8001CF222 /* 网络封装 */,
+				B8256753247CF3F8001CF222 /* 网络请求封装 */,
 				B825673F247CF29A001CF222 /* AppDelegate.swift */,
 				B8256741247CF29A001CF222 /* SceneDelegate.swift */,
 				B8256743247CF29A001CF222 /* ViewController.swift */,
+				B8513C512480F692008833B7 /* iOS_plug-Bridging-Header.h */,
 				B8256745247CF29A001CF222 /* Main.storyboard */,
 				B8256748247CF29D001CF222 /* Assets.xcassets */,
 				B825674A247CF29D001CF222 /* LaunchScreen.storyboard */,
@@ -89,7 +94,7 @@
 			path = iOS_plug;
 			sourceTree = "<group>";
 		};
-		B8256753247CF3F8001CF222 /* 网络封装 */ = {
+		B8256753247CF3F8001CF222 /* 网络请求封装 */ = {
 			isa = PBXGroup;
 			children = (
 				B8256754247CF425001CF222 /* ClientProtocol.swift */,
@@ -97,15 +102,24 @@
 				B8256755247CF426001CF222 /* RequestProtocol.swift */,
 				B83B61C7247F8B8A003A9200 /* ExampleNetViewController.swift */,
 			);
-			path = "网络封装";
+			path = "网络请求封装";
 			sourceTree = "<group>";
 		};
-		B83B61C9247FB82C003A9200 /* other */ = {
+		B83B61C9247FB82C003A9200 /* Color */ = {
 			isa = PBXGroup;
 			children = (
 				B83B61CA247FB843003A9200 /* UIColorExtension.swift */,
 			);
-			path = other;
+			path = Color;
+			sourceTree = "<group>";
+		};
+		B842950524A2DF7000142B68 /* 常驻线程 */ = {
+			isa = PBXGroup;
+			children = (
+				B842950824A2E25100142B68 /* PermanentThread.h */,
+				B842950924A2E25100142B68 /* PermanentThread.m */,
+			);
+			path = "常驻线程";
 			sourceTree = "<group>";
 		};
 		B8886809247E46E3004B6C7F /* 瀑布流 */ = {
@@ -120,7 +134,6 @@
 		B888680C247E4A39004B6C7F /* WeakProxy弱代理 */ = {
 			isa = PBXGroup;
 			children = (
-				B8513C512480F692008833B7 /* iOS_plug-Bridging-Header.h */,
 				B8513C522480F693008833B7 /* WeakProxy.h */,
 				B8513C532480F693008833B7 /* WeakProxy.m */,
 			);
@@ -201,6 +214,7 @@
 			files = (
 				B8886810247E5C0D004B6C7F /* ExampleFallViewController.swift in Sources */,
 				B83B61CB247FB843003A9200 /* UIColorExtension.swift in Sources */,
+				B842950A24A2E25100142B68 /* PermanentThread.m in Sources */,
 				B8256757247CF426001CF222 /* ClientProtocol.swift in Sources */,
 				B8256744247CF29A001CF222 /* ViewController.swift in Sources */,
 				B888680B247E4760004B6C7F /* UICollectionViewFallLayout.swift in Sources */,
