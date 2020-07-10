@@ -14,8 +14,8 @@ enum ClientError: Error {
 }
 
 // MARK: - Client
-protocol ClientProtocol {
+protocol Client {
     var host: String { get }
 
-    func send<T: RequestProtocol>(_ request: T, completion: @escaping (Result<T.Response, Error>) -> Void)
+    func send<T: Request>(_ request: T, completion: @escaping (Result<T.Response, Error>) -> Void)
 }

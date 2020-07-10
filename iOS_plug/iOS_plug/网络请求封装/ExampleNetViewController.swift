@@ -36,7 +36,7 @@ struct ExampleModel: Parsable {
 }
 
 /// Request
-struct ExampleRequest: RequestProtocol {
+struct ExampleRequest: Request {
     var path: String = "json1"
     var method: HTTPMethod = .GET
     var parameters: [String : Any]?
@@ -46,10 +46,10 @@ struct ExampleRequest: RequestProtocol {
 }
 
 /// 使用 URLSession 实现的 Client，也可以使用 AF、AL 等实现
-struct URLSessionClient: ClientProtocol {
+struct URLSessionClient: Client {
     var host: String = "https://gitee.com/throughskybrim/json/raw/master/"
     
-    func send<T: RequestProtocol>(_ request: T, completion: @escaping (Result<T.Response, Error>) -> Void) {
+    func send<T: Request>(_ request: T, completion: @escaping (Result<T.Response, Error>) -> Void) {
         
         guard let url = URL(string: host + request.path) else {
             DispatchQueue.main.async {

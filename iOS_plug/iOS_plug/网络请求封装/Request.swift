@@ -19,7 +19,7 @@ enum HTTPMethod: String {
 }
 
 /// # 发起请求遵循 Request 协议
-protocol RequestProtocol {
+protocol Request {
     var path: String { get }
     var method: HTTPMethod { get }
     var parameters: [String: Any]? { get }

@@ -13,8 +13,8 @@
 		B8256747247CF29A001CF222 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8256745247CF29A001CF222 /* Main.storyboard */; };
 		B8256749247CF29D001CF222 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8256748247CF29D001CF222 /* Assets.xcassets */; };
 		B825674C247CF29D001CF222 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B825674A247CF29D001CF222 /* LaunchScreen.storyboard */; };
-		B8256757247CF426001CF222 /* ClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8256754247CF425001CF222 /* ClientProtocol.swift */; };
-		B8256758247CF426001CF222 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8256755247CF426001CF222 /* RequestProtocol.swift */; };
+		B8256757247CF426001CF222 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8256754247CF425001CF222 /* Client.swift */; };
+		B8256758247CF426001CF222 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8256755247CF426001CF222 /* Request.swift */; };
 		B8256759247CF426001CF222 /* Parsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8256756247CF426001CF222 /* Parsable.swift */; };
 		B83B61C8247F8B8A003A9200 /* ExampleNetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83B61C7247F8B8A003A9200 /* ExampleNetViewController.swift */; };
 		B83B61CB247FB843003A9200 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83B61CA247FB843003A9200 /* UIColorExtension.swift */; };
@@ -33,8 +33,8 @@
 		B8256748247CF29D001CF222 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B825674B247CF29D001CF222 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B825674D247CF29D001CF222 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B8256754247CF425001CF222 /* ClientProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientProtocol.swift; sourceTree = "<group>"; };
-		B8256755247CF426001CF222 /* RequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
+		B8256754247CF425001CF222 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		B8256755247CF426001CF222 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		B8256756247CF426001CF222 /* Parsable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parsable.swift; sourceTree = "<group>"; };
 		B83B61C7247F8B8A003A9200 /* ExampleNetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleNetViewController.swift; sourceTree = "<group>"; };
 		B83B61CA247FB843003A9200 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -97,9 +97,9 @@
 		B8256753247CF3F8001CF222 /* 网络请求封装 */ = {
 			isa = PBXGroup;
 			children = (
-				B8256754247CF425001CF222 /* ClientProtocol.swift */,
+				B8256754247CF425001CF222 /* Client.swift */,
 				B8256756247CF426001CF222 /* Parsable.swift */,
-				B8256755247CF426001CF222 /* RequestProtocol.swift */,
+				B8256755247CF426001CF222 /* Request.swift */,
 				B83B61C7247F8B8A003A9200 /* ExampleNetViewController.swift */,
 			);
 			path = "网络请求封装";
@@ -215,13 +215,13 @@
 				B8886810247E5C0D004B6C7F /* ExampleFallViewController.swift in Sources */,
 				B83B61CB247FB843003A9200 /* UIColorExtension.swift in Sources */,
 				B842950A24A2E25100142B68 /* PermanentThread.m in Sources */,
-				B8256757247CF426001CF222 /* ClientProtocol.swift in Sources */,
+				B8256757247CF426001CF222 /* Client.swift in Sources */,
 				B8256744247CF29A001CF222 /* ViewController.swift in Sources */,
 				B888680B247E4760004B6C7F /* UICollectionViewFallLayout.swift in Sources */,
 				B8256740247CF29A001CF222 /* AppDelegate.swift in Sources */,
 				B8513C542480F693008833B7 /* WeakProxy.m in Sources */,
 				B8256742247CF29A001CF222 /* SceneDelegate.swift in Sources */,
-				B8256758247CF426001CF222 /* RequestProtocol.swift in Sources */,
+				B8256758247CF426001CF222 /* Request.swift in Sources */,
 				B83B61C8247F8B8A003A9200 /* ExampleNetViewController.swift in Sources */,
 				B8256759247CF426001CF222 /* Parsable.swift in Sources */,
 			);

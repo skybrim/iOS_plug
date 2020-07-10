@@ -28,4 +28,4 @@ extension Parsable {
 
 /// # Array 条件遵循
 /// 当 Array 里的元素遵循 Parsable 时，Array 也遵循 Parsable 协议
-extension Array: Parsable where Array.Element: Parsable {}
+extension Array: Parsable where Element: Parsable {}
