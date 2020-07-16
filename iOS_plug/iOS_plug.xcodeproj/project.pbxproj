@@ -20,6 +20,7 @@
 		B83B61CB247FB843003A9200 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83B61CA247FB843003A9200 /* UIColorExtension.swift */; };
 		B842950A24A2E25100142B68 /* PermanentThread.m in Sources */ = {isa = PBXBuildFile; fileRef = B842950924A2E25100142B68 /* PermanentThread.m */; };
 		B8486C6124C0393E00C0E62F /* FIFOQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8486C6024C0393E00C0E62F /* FIFOQueue.swift */; };
+		B8486C6424C03CCE00C0E62F /* Words.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8486C6324C03CCE00C0E62F /* Words.swift */; };
 		B8513C542480F693008833B7 /* WeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = B8513C532480F693008833B7 /* WeakProxy.m */; };
 		B888680B247E4760004B6C7F /* UICollectionViewFallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888680A247E4760004B6C7F /* UICollectionViewFallLayout.swift */; };
 		B8886810247E5C0D004B6C7F /* ExampleFallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888680F247E5C0D004B6C7F /* ExampleFallViewController.swift */; };
@@ -42,6 +43,7 @@
 		B842950824A2E25100142B68 /* PermanentThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PermanentThread.h; sourceTree = "<group>"; };
 		B842950924A2E25100142B68 /* PermanentThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PermanentThread.m; sourceTree = "<group>"; };
 		B8486C6024C0393E00C0E62F /* FIFOQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIFOQueue.swift; sourceTree = "<group>"; };
+		B8486C6324C03CCE00C0E62F /* Words.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Words.swift; sourceTree = "<group>"; };
 		B8513C512480F692008833B7 /* iOS_plug-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS_plug-Bridging-Header.h"; sourceTree = "<group>"; };
 		B8513C522480F693008833B7 /* WeakProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeakProxy.h; sourceTree = "<group>"; };
 		B8513C532480F693008833B7 /* WeakProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeakProxy.m; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 		B825673E247CF29A001CF222 /* iOS_plug */ = {
 			isa = PBXGroup;
 			children = (
+				B8486C6224C03C9F00C0E62F /* 自定义索引 */,
 				B8486C5F24C0392C00C0E62F /* 队列 */,
 				B842950524A2DF7000142B68 /* 常驻线程 */,
 				B83B61C9247FB82C003A9200 /* Color */,
@@ -131,6 +134,14 @@
 				B8486C6024C0393E00C0E62F /* FIFOQueue.swift */,
 			);
 			path = "队列";
+			sourceTree = "<group>";
+		};
+		B8486C6224C03C9F00C0E62F /* 自定义索引 */ = {
+			isa = PBXGroup;
+			children = (
+				B8486C6324C03CCE00C0E62F /* Words.swift */,
+			);
+			path = "自定义索引";
 			sourceTree = "<group>";
 		};
 		B8886809247E46E3004B6C7F /* 瀑布流 */ = {
@@ -230,6 +241,7 @@
 				B8256757247CF426001CF222 /* Client.swift in Sources */,
 				B8256744247CF29A001CF222 /* ViewController.swift in Sources */,
 				B888680B247E4760004B6C7F /* UICollectionViewFallLayout.swift in Sources */,
+				B8486C6424C03CCE00C0E62F /* Words.swift in Sources */,
 				B8256740247CF29A001CF222 /* AppDelegate.swift in Sources */,
 				B8513C542480F693008833B7 /* WeakProxy.m in Sources */,
 				B8256742247CF29A001CF222 /* SceneDelegate.swift in Sources */,
