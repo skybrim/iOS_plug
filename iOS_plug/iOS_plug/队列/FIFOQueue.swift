@@ -80,4 +80,12 @@ extension FIFOQueue: ExpressibleByArrayLiteral {
     }
 }
 
-
+// 后续优化
+extension FIFOQueue: RangeReplaceableCollection {
+    mutating func replaceSubrange<C:Collection> (_ subrange: Range<Int>, with newElements: C)
+        where C.Element == Element {
+            right = left.reversed() + right
+            left.removeAll()
+            right.replaceSubrange(subrange, with: newElements)
+        }
+}

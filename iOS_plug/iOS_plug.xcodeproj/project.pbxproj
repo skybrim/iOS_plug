@@ -22,6 +22,7 @@
 		B8486C6124C0393E00C0E62F /* FIFOQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8486C6024C0393E00C0E62F /* FIFOQueue.swift */; };
 		B8486C6424C03CCE00C0E62F /* Words.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8486C6324C03CCE00C0E62F /* Words.swift */; };
 		B8513C542480F693008833B7 /* WeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = B8513C532480F693008833B7 /* WeakProxy.m */; };
+		B87CDF8624C57A5200E5E14D /* Array+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87CDF8524C57A5200E5E14D /* Array+Additions.swift */; };
 		B888680B247E4760004B6C7F /* UICollectionViewFallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888680A247E4760004B6C7F /* UICollectionViewFallLayout.swift */; };
 		B8886810247E5C0D004B6C7F /* ExampleFallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888680F247E5C0D004B6C7F /* ExampleFallViewController.swift */; };
 /* End PBXBuildFile section */
@@ -47,6 +48,7 @@
 		B8513C512480F692008833B7 /* iOS_plug-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS_plug-Bridging-Header.h"; sourceTree = "<group>"; };
 		B8513C522480F693008833B7 /* WeakProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeakProxy.h; sourceTree = "<group>"; };
 		B8513C532480F693008833B7 /* WeakProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeakProxy.m; sourceTree = "<group>"; };
+		B87CDF8524C57A5200E5E14D /* Array+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Additions.swift"; sourceTree = "<group>"; };
 		B888680A247E4760004B6C7F /* UICollectionViewFallLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewFallLayout.swift; sourceTree = "<group>"; };
 		B888680F247E5C0D004B6C7F /* ExampleFallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleFallViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +83,7 @@
 		B825673E247CF29A001CF222 /* iOS_plug */ = {
 			isa = PBXGroup;
 			children = (
+				B87CDF8424C579FA00E5E14D /* Array */,
 				B8486C6224C03C9F00C0E62F /* 自定义索引 */,
 				B8486C5F24C0392C00C0E62F /* 队列 */,
 				B842950524A2DF7000142B68 /* 常驻线程 */,
@@ -142,6 +145,14 @@
 				B8486C6324C03CCE00C0E62F /* Words.swift */,
 			);
 			path = "自定义索引";
+			sourceTree = "<group>";
+		};
+		B87CDF8424C579FA00E5E14D /* Array */ = {
+			isa = PBXGroup;
+			children = (
+				B87CDF8524C57A5200E5E14D /* Array+Additions.swift */,
+			);
+			path = Array;
 			sourceTree = "<group>";
 		};
 		B8886809247E46E3004B6C7F /* 瀑布流 */ = {
@@ -234,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B87CDF8624C57A5200E5E14D /* Array+Additions.swift in Sources */,
 				B8886810247E5C0D004B6C7F /* ExampleFallViewController.swift in Sources */,
 				B8486C6124C0393E00C0E62F /* FIFOQueue.swift in Sources */,
 				B83B61CB247FB843003A9200 /* UIColorExtension.swift in Sources */,
