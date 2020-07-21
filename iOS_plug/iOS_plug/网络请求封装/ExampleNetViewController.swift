@@ -14,19 +14,18 @@ class ExampleNetViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        view.backgroundColor = UIColor.white
+        
+        GithubClient.manager.send(ExampleRequest()) {result in
+            switch result {
+            case .success(let model):
+                dump(model)
+            case .failure(let error):
+                dump(error)
+            }
+        }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 /// Model
@@ -46,8 +45,12 @@ struct ExampleRequest: Request {
 }
 
 /// 使用 URLSession 实现的 Client，也可以使用 AF、AL 等实现
-struct URLSessionClient: Client {
-    var host: String = "https://gitee.com/throughskybrim/json/raw/master/"
+struct GithubClient: Client {
+    
+    static let manager = GithubClient()
+    private init() {}
+    
+    var host: String = "https://raw.githubusercontent.com/skybrim/AllImages/dev/"
     
     func send<T: Request>(_ request: T, completion: @escaping (Result<T.Response, Error>) -> Void) {
         

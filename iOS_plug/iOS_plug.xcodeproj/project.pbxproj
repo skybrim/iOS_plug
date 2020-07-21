@@ -23,7 +23,7 @@
 		B8486C6424C03CCE00C0E62F /* Words.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8486C6324C03CCE00C0E62F /* Words.swift */; };
 		B8513C542480F693008833B7 /* WeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = B8513C532480F693008833B7 /* WeakProxy.m */; };
 		B87CDF8624C57A5200E5E14D /* Array+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87CDF8524C57A5200E5E14D /* Array+Additions.swift */; };
-		B87CDF8924C5915E00E5E14D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87CDF8824C5915E00E5E14D /* Utils.swift */; };
+		B87CDF8924C5915E00E5E14D /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87CDF8824C5915E00E5E14D /* Operator.swift */; };
 		B87CDF8B24C5926000E5E14D /* Sequence+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87CDF8A24C5926000E5E14D /* Sequence+Addition.swift */; };
 		B888680B247E4760004B6C7F /* UICollectionViewFallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888680A247E4760004B6C7F /* UICollectionViewFallLayout.swift */; };
 		B8886810247E5C0D004B6C7F /* ExampleFallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888680F247E5C0D004B6C7F /* ExampleFallViewController.swift */; };
@@ -51,7 +51,7 @@
 		B8513C522480F693008833B7 /* WeakProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeakProxy.h; sourceTree = "<group>"; };
 		B8513C532480F693008833B7 /* WeakProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeakProxy.m; sourceTree = "<group>"; };
 		B87CDF8524C57A5200E5E14D /* Array+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Additions.swift"; sourceTree = "<group>"; };
-		B87CDF8824C5915E00E5E14D /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		B87CDF8824C5915E00E5E14D /* Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operator.swift; sourceTree = "<group>"; };
 		B87CDF8A24C5926000E5E14D /* Sequence+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+Addition.swift"; sourceTree = "<group>"; };
 		B888680A247E4760004B6C7F /* UICollectionViewFallLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewFallLayout.swift; sourceTree = "<group>"; };
 		B888680F247E5C0D004B6C7F /* ExampleFallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleFallViewController.swift; sourceTree = "<group>"; };
@@ -164,7 +164,7 @@
 		B87CDF8724C5913A00E5E14D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				B87CDF8824C5915E00E5E14D /* Utils.swift */,
+				B87CDF8824C5915E00E5E14D /* Operator.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -267,7 +267,7 @@
 				B842950A24A2E25100142B68 /* PermanentThread.m in Sources */,
 				B8256757247CF426001CF222 /* Client.swift in Sources */,
 				B8256744247CF29A001CF222 /* ViewController.swift in Sources */,
-				B87CDF8924C5915E00E5E14D /* Utils.swift in Sources */,
+				B87CDF8924C5915E00E5E14D /* Operator.swift in Sources */,
 				B888680B247E4760004B6C7F /* UICollectionViewFallLayout.swift in Sources */,
 				B8486C6424C03CCE00C0E62F /* Words.swift in Sources */,
 				B8256740247CF29A001CF222 /* AppDelegate.swift in Sources */,
