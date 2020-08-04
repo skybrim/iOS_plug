@@ -12,12 +12,15 @@ class ExampleFallViewController: UIViewController {
     
     // MARK: Class Variable Definitions
     
+    fileprivate var dataArray: [FallModel] = []
+    
     fileprivate let FallCell = "FallCell"
 
     lazy var fall: UICollectionView = {
         let fallLayout = UICollectionViewFallLayout()
         fallLayout.delegate = self
-        let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: fallLayout)
+        let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: fallLayout)
+        collectionView.backgroundColor = UIColor.white
         collectionView.register(LabelCollectionViewCell.self, forCellWithReuseIdentifier: FallCell)
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -28,9 +31,14 @@ class ExampleFallViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // subview layout
         addSubviews()
         addViewConstraints()
+        
+        // create data
+        dataArray = createData()
+        fall.reloadData()
     }
     
     // MARK: Subview Layout Functions
@@ -55,7 +63,8 @@ class ExampleFallViewController: UIViewController {
 extension ExampleFallViewController: UICollectionViewFallLayoutDelegate {
 
     func fallLayout(_ fallLayout: UICollectionViewFallLayout, width: CGFloat, heightForIndexPath: IndexPath) -> CGFloat {
-        return 0
+        let data = dataArray[heightForIndexPath.item]
+        return data.height
     }
 }
 
@@ -63,12 +72,14 @@ extension ExampleFallViewController: UICollectionViewFallLayoutDelegate {
 
 extension ExampleFallViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 50
+        return dataArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FallCell, for: indexPath) as! LabelCollectionViewCell
+        let data = dataArray[indexPath.item]
         cell.textLabel.text = String(indexPath.item)
+        cell.contentView.backgroundColor = UIColor(hex6: UInt32(data.color))
         return cell
     }
 }
@@ -83,16 +94,21 @@ extension ExampleFallViewController: UICollectionViewDelegate {
 
 extension ExampleFallViewController {
     
-    func createData() -> String {
-        let colorArray = ["0xff0000", "0x00ff00", "0x0000ff"]
-        return ""
+    func createData() -> [FallModel] {
+        let colorArray = [0xff0000, 0x00ff00, 0x0000ff]
+        var dataArray = [FallModel]()
+        for _ in 0..<100 {
+            let model = FallModel(color: colorArray[Int(arc4random()%3)], height: CGFloat(arc4random()%50)+50)
+            dataArray.append(model)
+        }
+        return dataArray
     }
 }
 
 // MARK:- Model
 
 struct FallModel: Parsable {
-    let color: String
+    let color: Int
     let height: CGFloat
 }
 
@@ -102,19 +118,13 @@ class LabelCollectionViewCell: UICollectionViewCell {
     
     var textLabel: UILabel = {
         let label = UILabel()
-        label.textAlignment = .center
         return label
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        let red = UIColor(named: "red")
-
-        backgroundColor = red
-        
         contentView.addSubview(textLabel)
-        
         textLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             textLabel.topAnchor.constraint(equalTo: topAnchor),

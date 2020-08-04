@@ -74,13 +74,21 @@ class UICollectionViewFallLayout: UICollectionViewLayout {
     override func prepare() {
         super.prepare()
         
-        self.attributesArray.removeAll()
+        // 初始高度
+        self.contentHeight = 0
         
+        // 重置列高度数组
+        self.columnHeights.removeAll()
+        self.columnHeights = Array(repeating: edgeInsets.top, count: columnCount)
+        
+        // 重置 attributes 数组
+        self.attributesArray.removeAll()
         if let itemCount = collectionView?.numberOfItems(inSection: 0) {
             for item in 0..<itemCount {
                 let indexPath = IndexPath(item: item, section: 0)
-                let attrs = UICollectionViewLayoutAttributes(forCellWith: indexPath)
-                self.attributesArray.append(attrs)
+                if let attrs = layoutAttributesForItem(at: indexPath) {
+                    self.attributesArray.append(attrs)
+                }
             }
         }
     }

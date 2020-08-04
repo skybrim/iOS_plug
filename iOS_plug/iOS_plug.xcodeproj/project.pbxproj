@@ -13,13 +13,19 @@
 		B8256747247CF29A001CF222 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8256745247CF29A001CF222 /* Main.storyboard */; };
 		B8256749247CF29D001CF222 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8256748247CF29D001CF222 /* Assets.xcassets */; };
 		B825674C247CF29D001CF222 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B825674A247CF29D001CF222 /* LaunchScreen.storyboard */; };
-		B8256757247CF426001CF222 /* ClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8256754247CF425001CF222 /* ClientProtocol.swift */; };
-		B8256758247CF426001CF222 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8256755247CF426001CF222 /* RequestProtocol.swift */; };
+		B8256757247CF426001CF222 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8256754247CF425001CF222 /* Client.swift */; };
+		B8256758247CF426001CF222 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8256755247CF426001CF222 /* Request.swift */; };
 		B8256759247CF426001CF222 /* Parsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8256756247CF426001CF222 /* Parsable.swift */; };
 		B83B61C8247F8B8A003A9200 /* ExampleNetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83B61C7247F8B8A003A9200 /* ExampleNetViewController.swift */; };
-		B83B61CB247FB843003A9200 /* Kit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83B61CA247FB843003A9200 /* Kit.swift */; };
+		B83B61CB247FB843003A9200 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83B61CA247FB843003A9200 /* UIColorExtension.swift */; };
+		B842950A24A2E25100142B68 /* PermanentThread.m in Sources */ = {isa = PBXBuildFile; fileRef = B842950924A2E25100142B68 /* PermanentThread.m */; };
+		B8486C6124C0393E00C0E62F /* FIFOQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8486C6024C0393E00C0E62F /* FIFOQueue.swift */; };
+		B8486C6424C03CCE00C0E62F /* Words.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8486C6324C03CCE00C0E62F /* Words.swift */; };
+		B8513C542480F693008833B7 /* WeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = B8513C532480F693008833B7 /* WeakProxy.m */; };
+		B87CDF8624C57A5200E5E14D /* Array+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87CDF8524C57A5200E5E14D /* Array+Additions.swift */; };
+		B87CDF8924C5915E00E5E14D /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87CDF8824C5915E00E5E14D /* Operator.swift */; };
+		B87CDF8B24C5926000E5E14D /* Sequence+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87CDF8A24C5926000E5E14D /* Sequence+Addition.swift */; };
 		B888680B247E4760004B6C7F /* UICollectionViewFallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888680A247E4760004B6C7F /* UICollectionViewFallLayout.swift */; };
-		B888680E247E5A80004B6C7F /* WeakProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888680D247E5A80004B6C7F /* WeakProxy.swift */; };
 		B8886810247E5C0D004B6C7F /* ExampleFallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888680F247E5C0D004B6C7F /* ExampleFallViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,13 +38,22 @@
 		B8256748247CF29D001CF222 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B825674B247CF29D001CF222 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B825674D247CF29D001CF222 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B8256754247CF425001CF222 /* ClientProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientProtocol.swift; sourceTree = "<group>"; };
-		B8256755247CF426001CF222 /* RequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
+		B8256754247CF425001CF222 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		B8256755247CF426001CF222 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		B8256756247CF426001CF222 /* Parsable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parsable.swift; sourceTree = "<group>"; };
 		B83B61C7247F8B8A003A9200 /* ExampleNetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleNetViewController.swift; sourceTree = "<group>"; };
-		B83B61CA247FB843003A9200 /* Kit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kit.swift; sourceTree = "<group>"; };
+		B83B61CA247FB843003A9200 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		B842950824A2E25100142B68 /* PermanentThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PermanentThread.h; sourceTree = "<group>"; };
+		B842950924A2E25100142B68 /* PermanentThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PermanentThread.m; sourceTree = "<group>"; };
+		B8486C6024C0393E00C0E62F /* FIFOQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIFOQueue.swift; sourceTree = "<group>"; };
+		B8486C6324C03CCE00C0E62F /* Words.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Words.swift; sourceTree = "<group>"; };
+		B8513C512480F692008833B7 /* iOS_plug-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS_plug-Bridging-Header.h"; sourceTree = "<group>"; };
+		B8513C522480F693008833B7 /* WeakProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeakProxy.h; sourceTree = "<group>"; };
+		B8513C532480F693008833B7 /* WeakProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeakProxy.m; sourceTree = "<group>"; };
+		B87CDF8524C57A5200E5E14D /* Array+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Additions.swift"; sourceTree = "<group>"; };
+		B87CDF8824C5915E00E5E14D /* Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operator.swift; sourceTree = "<group>"; };
+		B87CDF8A24C5926000E5E14D /* Sequence+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+Addition.swift"; sourceTree = "<group>"; };
 		B888680A247E4760004B6C7F /* UICollectionViewFallLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewFallLayout.swift; sourceTree = "<group>"; };
-		B888680D247E5A80004B6C7F /* WeakProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakProxy.swift; sourceTree = "<group>"; };
 		B888680F247E5C0D004B6C7F /* ExampleFallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleFallViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,13 +87,19 @@
 		B825673E247CF29A001CF222 /* iOS_plug */ = {
 			isa = PBXGroup;
 			children = (
-				B83B61C9247FB82C003A9200 /* other */,
+				B87CDF8724C5913A00E5E14D /* Utils */,
+				B87CDF8424C579FA00E5E14D /* Collection */,
+				B8486C6224C03C9F00C0E62F /* 自定义索引 */,
+				B8486C5F24C0392C00C0E62F /* 队列 */,
+				B842950524A2DF7000142B68 /* 常驻线程 */,
+				B83B61C9247FB82C003A9200 /* Color */,
 				B888680C247E4A39004B6C7F /* WeakProxy弱代理 */,
 				B8886809247E46E3004B6C7F /* 瀑布流 */,
-				B8256753247CF3F8001CF222 /* 网络封装 */,
+				B8256753247CF3F8001CF222 /* 网络请求封装 */,
 				B825673F247CF29A001CF222 /* AppDelegate.swift */,
 				B8256741247CF29A001CF222 /* SceneDelegate.swift */,
 				B8256743247CF29A001CF222 /* ViewController.swift */,
+				B8513C512480F692008833B7 /* iOS_plug-Bridging-Header.h */,
 				B8256745247CF29A001CF222 /* Main.storyboard */,
 				B8256748247CF29D001CF222 /* Assets.xcassets */,
 				B825674A247CF29D001CF222 /* LaunchScreen.storyboard */,
@@ -87,23 +108,65 @@
 			path = iOS_plug;
 			sourceTree = "<group>";
 		};
-		B8256753247CF3F8001CF222 /* 网络封装 */ = {
+		B8256753247CF3F8001CF222 /* 网络请求封装 */ = {
 			isa = PBXGroup;
 			children = (
-				B8256754247CF425001CF222 /* ClientProtocol.swift */,
+				B8256754247CF425001CF222 /* Client.swift */,
 				B8256756247CF426001CF222 /* Parsable.swift */,
-				B8256755247CF426001CF222 /* RequestProtocol.swift */,
+				B8256755247CF426001CF222 /* Request.swift */,
 				B83B61C7247F8B8A003A9200 /* ExampleNetViewController.swift */,
 			);
-			path = "网络封装";
+			path = "网络请求封装";
 			sourceTree = "<group>";
 		};
-		B83B61C9247FB82C003A9200 /* other */ = {
+		B83B61C9247FB82C003A9200 /* Color */ = {
 			isa = PBXGroup;
 			children = (
-				B83B61CA247FB843003A9200 /* Kit.swift */,
+				B83B61CA247FB843003A9200 /* UIColorExtension.swift */,
 			);
-			path = other;
+			path = Color;
+			sourceTree = "<group>";
+		};
+		B842950524A2DF7000142B68 /* 常驻线程 */ = {
+			isa = PBXGroup;
+			children = (
+				B842950824A2E25100142B68 /* PermanentThread.h */,
+				B842950924A2E25100142B68 /* PermanentThread.m */,
+			);
+			path = "常驻线程";
+			sourceTree = "<group>";
+		};
+		B8486C5F24C0392C00C0E62F /* 队列 */ = {
+			isa = PBXGroup;
+			children = (
+				B8486C6024C0393E00C0E62F /* FIFOQueue.swift */,
+			);
+			path = "队列";
+			sourceTree = "<group>";
+		};
+		B8486C6224C03C9F00C0E62F /* 自定义索引 */ = {
+			isa = PBXGroup;
+			children = (
+				B8486C6324C03CCE00C0E62F /* Words.swift */,
+			);
+			path = "自定义索引";
+			sourceTree = "<group>";
+		};
+		B87CDF8424C579FA00E5E14D /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				B87CDF8524C57A5200E5E14D /* Array+Additions.swift */,
+				B87CDF8A24C5926000E5E14D /* Sequence+Addition.swift */,
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
+		B87CDF8724C5913A00E5E14D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B87CDF8824C5915E00E5E14D /* Operator.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		B8886809247E46E3004B6C7F /* 瀑布流 */ = {
@@ -118,7 +181,8 @@
 		B888680C247E4A39004B6C7F /* WeakProxy弱代理 */ = {
 			isa = PBXGroup;
 			children = (
-				B888680D247E5A80004B6C7F /* WeakProxy.swift */,
+				B8513C522480F693008833B7 /* WeakProxy.h */,
+				B8513C532480F693008833B7 /* WeakProxy.m */,
 			);
 			path = "WeakProxy弱代理";
 			sourceTree = "<group>";
@@ -155,6 +219,7 @@
 				TargetAttributes = {
 					B825673B247CF29A001CF222 = {
 						CreatedOnToolsVersion = 11.4.1;
+						LastSwiftMigration = 1140;
 					};
 				};
 			};
@@ -194,15 +259,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B888680E247E5A80004B6C7F /* WeakProxy.swift in Sources */,
+				B87CDF8624C57A5200E5E14D /* Array+Additions.swift in Sources */,
+				B87CDF8B24C5926000E5E14D /* Sequence+Addition.swift in Sources */,
 				B8886810247E5C0D004B6C7F /* ExampleFallViewController.swift in Sources */,
-				B83B61CB247FB843003A9200 /* Kit.swift in Sources */,
-				B8256757247CF426001CF222 /* ClientProtocol.swift in Sources */,
+				B8486C6124C0393E00C0E62F /* FIFOQueue.swift in Sources */,
+				B83B61CB247FB843003A9200 /* UIColorExtension.swift in Sources */,
+				B842950A24A2E25100142B68 /* PermanentThread.m in Sources */,
+				B8256757247CF426001CF222 /* Client.swift in Sources */,
 				B8256744247CF29A001CF222 /* ViewController.swift in Sources */,
+				B87CDF8924C5915E00E5E14D /* Operator.swift in Sources */,
 				B888680B247E4760004B6C7F /* UICollectionViewFallLayout.swift in Sources */,
+				B8486C6424C03CCE00C0E62F /* Words.swift in Sources */,
 				B8256740247CF29A001CF222 /* AppDelegate.swift in Sources */,
+				B8513C542480F693008833B7 /* WeakProxy.m in Sources */,
 				B8256742247CF29A001CF222 /* SceneDelegate.swift in Sources */,
-				B8256758247CF426001CF222 /* RequestProtocol.swift in Sources */,
+				B8256758247CF426001CF222 /* Request.swift in Sources */,
 				B83B61C8247F8B8A003A9200 /* ExampleNetViewController.swift in Sources */,
 				B8256759247CF426001CF222 /* Parsable.swift in Sources */,
 			);
@@ -348,6 +419,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MUXR6G7733;
 				INFOPLIST_FILE = iOS_plug/Info.plist;
@@ -357,6 +429,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.skybrim.iOS-plug";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOS_plug/iOS_plug-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -366,6 +440,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MUXR6G7733;
 				INFOPLIST_FILE = iOS_plug/Info.plist;
@@ -375,6 +450,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.skybrim.iOS-plug";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOS_plug/iOS_plug-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
