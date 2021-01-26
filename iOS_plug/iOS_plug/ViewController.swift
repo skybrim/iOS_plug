@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-
 class ViewController: UIViewController {
     
     fileprivate let ShowFuncCell = "ShowFuncCell"
@@ -28,7 +26,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        funcArray = ["网络封装", "瀑布流", "弱代理"]
+        funcArray = ["网络封装", "瀑布流", "调用栈"]
         
         addSubviews()
     }
@@ -45,6 +43,8 @@ extension ViewController: UITableViewDelegate {
             self.navigationController?.pushViewController(ExampleNetViewController(), animated: true)
         case 1:
             self.navigationController?.pushViewController(ExampleFallViewController(), animated: true)
+        case 2:
+            CallstackInfo.showAll();
         default:
             tableView.deselectRow(at: indexPath, animated: true)
         }

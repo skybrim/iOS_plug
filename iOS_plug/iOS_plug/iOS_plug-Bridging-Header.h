@@ -4,3 +4,4 @@
 
 #import "WeakProxy.h"
 #import "PermanentThread.h"
+#import "CallstackInfo.h"

@@ -27,6 +27,7 @@
 		B87CDF8B24C5926000E5E14D /* Sequence+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87CDF8A24C5926000E5E14D /* Sequence+Addition.swift */; };
 		B888680B247E4760004B6C7F /* UICollectionViewFallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888680A247E4760004B6C7F /* UICollectionViewFallLayout.swift */; };
 		B8886810247E5C0D004B6C7F /* ExampleFallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888680F247E5C0D004B6C7F /* ExampleFallViewController.swift */; };
+		B8B857BF25BFA5550011462A /* CallstackInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B857BE25BFA5550011462A /* CallstackInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,8 @@
 		B87CDF8A24C5926000E5E14D /* Sequence+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+Addition.swift"; sourceTree = "<group>"; };
 		B888680A247E4760004B6C7F /* UICollectionViewFallLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewFallLayout.swift; sourceTree = "<group>"; };
 		B888680F247E5C0D004B6C7F /* ExampleFallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleFallViewController.swift; sourceTree = "<group>"; };
+		B8B857BD25BFA5550011462A /* CallstackInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CallstackInfo.h; sourceTree = "<group>"; };
+		B8B857BE25BFA5550011462A /* CallstackInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CallstackInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +90,7 @@
 		B825673E247CF29A001CF222 /* iOS_plug */ = {
 			isa = PBXGroup;
 			children = (
+				B8B857B625BFA2A10011462A /* Callstack调用栈信息 */,
 				B87CDF8724C5913A00E5E14D /* Utils */,
 				B87CDF8424C579FA00E5E14D /* Collection */,
 				B8486C6224C03C9F00C0E62F /* 自定义索引 */,
@@ -187,6 +191,15 @@
 			path = "WeakProxy弱代理";
 			sourceTree = "<group>";
 		};
+		B8B857B625BFA2A10011462A /* Callstack调用栈信息 */ = {
+			isa = PBXGroup;
+			children = (
+				B8B857BD25BFA5550011462A /* CallstackInfo.h */,
+				B8B857BE25BFA5550011462A /* CallstackInfo.m */,
+			);
+			path = "Callstack调用栈信息";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -263,6 +276,7 @@
 				B87CDF8B24C5926000E5E14D /* Sequence+Addition.swift in Sources */,
 				B8886810247E5C0D004B6C7F /* ExampleFallViewController.swift in Sources */,
 				B8486C6124C0393E00C0E62F /* FIFOQueue.swift in Sources */,
+				B8B857BF25BFA5550011462A /* CallstackInfo.m in Sources */,
 				B83B61CB247FB843003A9200 /* UIColorExtension.swift in Sources */,
 				B842950A24A2E25100142B68 /* PermanentThread.m in Sources */,
 				B8256757247CF426001CF222 /* Client.swift in Sources */,
